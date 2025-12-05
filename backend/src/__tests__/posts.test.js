@@ -29,7 +29,6 @@ beforeEach(async () => {
     createdSamplePosts.push(await createdPost.save())
   }
 })
-
 describe('getting a post', () => {
   test('should return the full post', async () => {
     const post = await getPostById(createdSamplePosts[0]._id)
@@ -83,7 +82,6 @@ describe('deleting posts', () => {
     expect(result.deletedCount).toEqual(0)
   })
 })
-
 describe('listing posts', () => {
   test('should return all posts', async () => {
     const posts = await listAllPosts()
