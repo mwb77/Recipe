@@ -1,10 +1,10 @@
-import { Post } from './components/Post.jsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Recipe } from './Recipe.jsx'
+const queryClient = new QueryClient()
 export function App() {
   return (
-    <Post
-      title='Full-Stack React Projects'
-      contents="Let's become full-stack developers!"
-      author='Daniel Bugl'
-    />
+    <QueryClientProvider client={queryClient}>
+      <Recipe />
+    </QueryClientProvider>
   )
 }
